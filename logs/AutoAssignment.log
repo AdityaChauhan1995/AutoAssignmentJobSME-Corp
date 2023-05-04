@@ -1,0 +1,1119 @@
+2021-05-11 16:49:06,627 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 9976 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 16:49:06,637 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 16:49:07,553 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 16:49:07,706 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 136ms. Found 6 repository interfaces.
+2021-05-11 16:49:08,507 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 16:49:30,679 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:419)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:536)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:228)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0.CGLIB$jpaVendorAdapter$6(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0$$FastClassBySpringCGLIB$$3f03ac0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.maxis.autoAssignment.AutoAssignmentBatchApplication.main(AutoAssignmentBatchApplication.java:21)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:375)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:678)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:238)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1054)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:308)
+	... 76 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:209)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:353)
+	... 81 common frames omitted
+2021-05-11 16:49:30,681 WARN org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup [main] Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:328)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0.CGLIB$jpaVendorAdapter$6(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0$$FastClassBySpringCGLIB$$3f03ac0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5d33c8c0.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.maxis.autoAssignment.AutoAssignmentBatchApplication.main(AutoAssignmentBatchApplication.java:21)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	... 61 common frames omitted
+Caused by: java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:419)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:536)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:228)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 62 common frames omitted
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:375)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:678)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:238)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1054)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:308)
+	... 76 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:209)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:353)
+	... 81 common frames omitted
+2021-05-11 16:49:30,700 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 16:52:23,602 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 15060 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 16:52:23,605 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 16:52:24,335 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 16:52:24,457 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 107ms. Found 6 repository interfaces.
+2021-05-11 16:52:25,235 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 16:52:33,545 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 16:52:33,658 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 16:52:33,765 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 16:52:33,912 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 16:52:33,914 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 16:52:34,245 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 16:52:34,704 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 16:52:34,714 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 16:52:34,716 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 16:52:36,823 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 16:52:37,268 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 16:52:37,911 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 14.855 seconds (JVM running for 15.456)
+2021-05-11 16:52:40,266 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for Corp is null
+2021-05-11 16:53:08,967 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for SMEInd is null
+2021-05-11 16:53:42,750 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No. of active users for SME : 9
+2021-05-11 16:53:42,750 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] =========================================================================================
+2021-05-11 16:53:42,751 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Starting scheduler............ 
+2021-05-11 16:53:42,752 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:53:42,752 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 16:53:42,753 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:53:42,753 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:53:42,753 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 16:53:42,753 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:54:20,691 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 16:54:20,692 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 16:54:21,244 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 16:54:21,245 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:54:21,246 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 16:54:21,246 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 16:54:21,247 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,247 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,247 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 16:54:21,248 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 16:54:21,248 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,248 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,248 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 16:54:21,249 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 16:54:21,249 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,249 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,249 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 16:54:21,250 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 16:54:21,250 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,250 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,250 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 16:54:21,251 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 16:54:21,251 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,251 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,251 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 16:54:21,252 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 16:54:21,252 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,252 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 16:54:21,252 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 16:54:21,253 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 16:54:21,253 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,253 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,253 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 16:54:21,254 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 16:54:21,254 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,254 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 16:54:21,254 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 16:54:21,255 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 16:54:21,255 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 16:54:21,255 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2215278 cannot be assgned to any active user due to component exclusion.
+2021-05-11 16:54:21,255 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:54:21,256 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 16:54:21,256 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:54:21,256 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:54:21,256 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 16:54:21,256 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:54:59,338 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 16:54:59,339 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 16:55:00,201 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 16:55:00,201 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:55:00,205 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 16:55:00,206 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214973 is 1
+2021-05-11 16:55:00,207 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 16:55:00,207 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,207 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,207 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:55:00,208 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,208 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,208 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 16:55:00,209 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,209 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,209 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 99 Daily Cap Limit: 150
+2021-05-11 16:55:00,209 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,210 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,210 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 16:55:00,210 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,210 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,210 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 16:55:00,211 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,211 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,212 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 102 Daily Cap Limit: 150
+2021-05-11 16:55:00,212 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,212 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,213 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 16:55:00,213 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,213 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,213 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 16:55:00,214 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 16:55:00,214 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:00,214 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214973 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 16:55:00,214 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:55:00,215 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 16:55:00,215 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:55:00,215 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:55:00,215 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 16:55:00,216 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:55:37,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 16:55:37,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 16:55:38,556 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 16:55:38,557 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:55:38,558 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214972 is 1
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,559 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 99 Daily Cap Limit: 150
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,560 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 102 Daily Cap Limit: 150
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214972 with msidn count:6
+2021-05-11 16:55:38,561 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214972 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214850 MSISDN count : 1Identity : 002926743K
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214850 MSISDN count : 1Identity : 002926743K
+2021-05-11 16:55:38,562 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:56:16,019 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 16:56:16,019 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 16:56:16,342 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 16:56:16,343 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:56:16,344 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 16:56:16,344 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214850 is 1
+2021-05-11 16:56:16,344 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 99 Daily Cap Limit: 150
+2021-05-11 16:56:16,345 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 102 Daily Cap Limit: 150
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,346 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214850 with msidn count:1
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214850 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214803 MSISDN count : 10Identity : 175511P
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:56:16,347 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:56:16,348 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214803 MSISDN count : 10Identity : 175511P
+2021-05-11 16:56:16,348 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:56:55,498 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 16:56:55,498 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 16:56:57,007 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 16:56:57,008 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:56:57,012 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214803 is 1
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 16:56:57,013 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 99 Daily Cap Limit: 150
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,014 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 102 Daily Cap Limit: 150
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,015 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214803 with msidn count:10
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 16:56:57,016 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214803 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214539 MSISDN count : 4Identity : BCR827
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214539 MSISDN count : 4Identity : BCR827
+2021-05-11 16:56:57,017 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 16:59:09,581 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 14664 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 16:59:09,588 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 16:59:10,384 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 16:59:10,530 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 132ms. Found 6 repository interfaces.
+2021-05-11 16:59:11,442 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 16:59:19,483 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 16:59:19,593 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 16:59:19,778 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 16:59:19,981 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 16:59:19,984 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 16:59:20,422 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 16:59:21,037 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 16:59:21,049 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 16:59:21,052 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 16:59:23,277 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 16:59:24,105 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 16:59:24,915 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 16.164 seconds (JVM running for 17.14)
+2021-05-11 16:59:38,440 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for Corp is null
+2021-05-11 17:00:27,590 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for SMEInd is null
+2021-05-11 17:01:55,563 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No. of active users for SME : 9
+2021-05-11 17:01:55,564 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] =========================================================================================
+2021-05-11 17:01:55,564 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Starting scheduler............ 
+2021-05-11 17:02:08,224 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:02:33,863 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:02:54,546 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:02:56,481 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:03:10,217 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:03:13,203 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:04:02,938 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:04:02,939 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:04:03,492 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:04:13,158 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:04:48,478 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:04:49,272 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:04:57,983 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,984 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:57,985 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:04:57,985 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:04:57,985 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 17:04:57,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 17:04:57,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 17:04:59,787 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:04:59,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:04:59,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:04:59,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:05:00,602 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:05:00,603 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:05:00,604 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:05:00,604 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:05:11,607 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:05:11,608 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2215278 cannot be assgned to any active user due to component exclusion.
+2021-05-11 17:05:31,134 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:05:33,814 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:05:35,792 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:05:35,793 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:05:41,453 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:05:41,453 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:06:23,153 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:06:23,154 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:06:24,018 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:06:28,458 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:06:42,786 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:06:42,787 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214973 is 1
+2021-05-11 17:06:42,787 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:06:42,787 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,787 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,788 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 99 Daily Cap Limit: 150
+2021-05-11 17:06:42,789 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,789 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,789 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 17:06:42,789 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,789 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,790 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 17:06:42,790 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,790 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,790 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 103 Daily Cap Limit: 150
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,791 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 17:06:42,792 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:06:42,792 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:06:42,792 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214973 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 17:07:45,806 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:07:47,528 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 17:07:49,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:07:49,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:07:50,623 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 17:07:50,624 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:08:28,200 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:08:28,201 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:08:29,189 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:08:32,697 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:08:41,689 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:08:41,689 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214972 is 1
+2021-05-11 17:08:41,690 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:11:38,426 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 8304 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 17:11:38,432 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 17:11:39,314 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 17:11:39,485 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 155ms. Found 6 repository interfaces.
+2021-05-11 17:11:40,314 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 17:11:47,413 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 17:11:47,525 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 17:11:47,626 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 17:11:47,760 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 17:11:47,765 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 17:11:48,066 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 17:11:48,546 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 17:11:48,558 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 17:11:48,561 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 17:11:50,790 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 17:11:51,374 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 17:11:52,038 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 14.308 seconds (JVM running for 15.186)
+2021-05-11 17:11:56,654 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for Corp is null
+2021-05-11 17:12:25,167 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for SMEInd is null
+2021-05-11 17:13:09,170 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No. of active users for SME : 9
+2021-05-11 17:13:09,170 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] =========================================================================================
+2021-05-11 17:13:09,171 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Starting scheduler............ 
+2021-05-11 17:13:15,684 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:13:17,419 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:13:19,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:13:19,264 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:13:20,225 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:13:20,226 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:14:00,448 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:14:00,448 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:14:00,975 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:14:04,970 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:14:23,300 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:14:23,300 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:14:23,300 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,300 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 17:14:23,301 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,302 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 17:14:23,303 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 17:14:25,362 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:25,363 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:25,363 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:14:25,363 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:14:27,424 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:27,424 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:14:27,424 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:14:27,425 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:14:27,425 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:14:27,425 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2215278 cannot be assgned to any active user due to component exclusion.
+2021-05-11 17:14:28,844 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:14:38,766 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:14:41,871 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:14:41,872 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:14:43,462 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:14:43,463 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:15:23,631 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:15:23,631 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:15:24,481 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:15:27,897 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:15:32,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:15:32,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214973 is 1
+2021-05-11 17:15:32,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:17:01,868 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:02,749 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,706 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:17:16,707 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,707 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,707 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 17:17:16,707 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: GYEMALATHA will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HEMAISS will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 126 Daily Cap Limit: 150
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: NAVINKUMAR@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,708 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 121 Daily Cap Limit: 150
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: RISHALINYM will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 103 Daily Cap Limit: 150
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nfarahina@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,709 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 69 Daily Cap Limit: 150
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: nurulizzat@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: HIDAYATIZ@maxis.com.my will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:17:16,710 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214973 cannot be assgned to any active user due to daily limit exceeding.
+2021-05-11 17:17:19,135 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:20:37,009 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 14896 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 17:20:37,015 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 17:20:37,757 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 17:20:37,907 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 135ms. Found 6 repository interfaces.
+2021-05-11 17:20:39,140 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 17:20:47,903 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 17:20:48,021 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 17:20:48,210 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 17:20:48,364 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 17:20:48,367 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 17:20:48,655 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 17:20:49,154 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 17:20:49,162 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 17:20:49,164 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 17:20:51,327 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 17:20:51,925 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 17:20:52,547 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 16.233 seconds (JVM running for 17.187)
+2021-05-11 17:20:57,274 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for Corp is null
+2021-05-11 17:21:26,060 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegList for SMEInd is null
+2021-05-11 17:22:04,882 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No. of active users for SME : 9
+2021-05-11 17:22:04,882 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] =========================================================================================
+2021-05-11 17:22:04,883 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Starting scheduler............ 
+2021-05-11 17:22:04,883 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:22:04,884 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:22:04,884 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:22:04,885 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:22:04,885 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2215278 MSISDN count : 5Identity : 500083W
+2021-05-11 17:22:04,885 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:22:46,929 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:22:46,929 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:22:47,914 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:22:47,914 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:22:47,915 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:22:47,915 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:22:47,915 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 17:22:47,916 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:22:47,917 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 73 Daily Cap Limit: 150
+2021-05-11 17:22:47,918 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:22:47,919 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2215278 cannot be assgned to any active user due to component exclusion.
+2021-05-11 17:22:47,920 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:22:47,921 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:22:47,921 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:22:47,921 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:22:47,921 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 MSISDN count : 6Identity : 939627V
+2021-05-11 17:22:47,921 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:23:30,613 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:23:30,614 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:23:31,490 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:23:31,490 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:23:31,493 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:23:31,493 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214973 is 1
+2021-05-11 17:23:31,494 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:23:31,494 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214973 with msidn count:6
+2021-05-11 17:23:31,494 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:23:31,495 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 191 Daily Cap Limit: 100
+2021-05-11 17:23:31,495 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:23:31,495 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ELINAMS@maxis.com.my Total Assigned : 127 Daily Cap Limit: 150
+2021-05-11 17:23:31,497 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: ELINAMS@maxis.com.my
+2021-05-11 17:23:31,497 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214973 is 1
+2021-05-11 17:23:31,498 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:23:31,498 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : ELINAMS@maxis.com.my week : 20 id : 939627V category:non-BIP
+2021-05-11 17:23:32,059 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214973 Inserted the record successfully...
+2021-05-11 17:23:32,059 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:23:32,059 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 17:23:32,060 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:23:32,060 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:23:32,060 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 MSISDN count : 6Identity : 187618K
+2021-05-11 17:23:32,060 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:24:12,759 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:24:12,759 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:24:13,647 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:24:13,647 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 193 Daily Cap Limit: 100
+2021-05-11 17:24:13,650 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:24:13,650 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214972 is 1
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214972 with msidn count:6
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 193 Daily Cap Limit: 100
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:24:13,651 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ELINAMS@maxis.com.my Total Assigned : 133 Daily Cap Limit: 150
+2021-05-11 17:24:13,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: ELINAMS@maxis.com.my
+2021-05-11 17:24:13,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214972 is 1
+2021-05-11 17:24:13,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:24:13,654 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : ELINAMS@maxis.com.my week : 20 id : 187618K category:non-BIP
+2021-05-11 17:24:14,180 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214972 Inserted the record successfully...
+2021-05-11 17:24:14,180 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:24:14,180 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214850 MSISDN count : 1Identity : 002926743K
+2021-05-11 17:24:14,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:24:14,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:24:14,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214850 MSISDN count : 1Identity : 002926743K
+2021-05-11 17:24:14,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:24:54,900 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:24:54,901 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:24:55,222 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:24:55,223 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:24:55,224 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:24:55,224 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214850 is 1
+2021-05-11 17:24:55,225 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:24:55,225 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214850 with msidn count:1
+2021-05-11 17:24:55,226 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:24:55,226 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:24:55,226 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:24:55,226 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ELINAMS@maxis.com.my Total Assigned : 139 Daily Cap Limit: 150
+2021-05-11 17:24:55,227 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: ELINAMS@maxis.com.my
+2021-05-11 17:24:55,227 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214850 is 1
+2021-05-11 17:24:55,228 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:24:55,228 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : ELINAMS@maxis.com.my week : 20 id : 002926743K category:non-BIP
+2021-05-11 17:24:55,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214850 Inserted the record successfully...
+2021-05-11 17:24:55,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:24:55,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214803 MSISDN count : 10Identity : 175511P
+2021-05-11 17:24:55,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:24:55,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:24:55,654 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214803 MSISDN count : 10Identity : 175511P
+2021-05-11 17:24:55,654 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:25:38,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:25:38,181 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:25:39,648 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:25:39,649 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214803 is 1
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214803 with msidn count:10
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:25:39,652 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:25:39,653 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ELINAMS@maxis.com.my Total Assigned : 140 Daily Cap Limit: 150
+2021-05-11 17:25:39,655 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: ELINAMS@maxis.com.my
+2021-05-11 17:25:39,656 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214803 is 1
+2021-05-11 17:25:39,656 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ELINAMS@maxis.com.my
+2021-05-11 17:25:39,656 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : ELINAMS@maxis.com.my week : 20 id : 175511P category:non-BIP
+2021-05-11 17:25:40,190 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214803 Inserted the record successfully...
+2021-05-11 17:25:40,191 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:25:40,191 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214539 MSISDN count : 4Identity : BCR827
+2021-05-11 17:25:40,191 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:25:40,191 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:25:40,192 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214539 MSISDN count : 4Identity : BCR827
+2021-05-11 17:25:40,192 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:26:20,604 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:26:20,604 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:26:21,125 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:26:21,126 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214539 is 1
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214539 with msidn count:4
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:26:21,127 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214539 with msidn count:4
+2021-05-11 17:26:21,128 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:26:21,128 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:26:21,128 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:26:21,128 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : GYEMALATHA Total Assigned : 104 Daily Cap Limit: 150
+2021-05-11 17:26:21,129 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: GYEMALATHA
+2021-05-11 17:26:21,129 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214539 is 1
+2021-05-11 17:26:21,129 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:26:21,129 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : GYEMALATHA week : 20 id : BCR827 category:non-BIP
+2021-05-11 17:26:21,553 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214539 Inserted the record successfully...
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214535 MSISDN count : 1Identity : 501546D
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214535 MSISDN count : 1Identity : 501546D
+2021-05-11 17:26:21,554 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:27:02,935 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:27:02,936 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:27:03,154 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:27:03,154 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:27:03,155 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:27:03,156 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214535 is 1
+2021-05-11 17:27:03,156 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:27:03,156 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214535 with msidn count:1
+2021-05-11 17:27:03,156 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:27:03,157 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:27:03,157 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214535 with msidn count:1
+2021-05-11 17:27:03,157 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:27:03,157 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:27:03,157 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:27:03,158 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : GYEMALATHA Total Assigned : 108 Daily Cap Limit: 150
+2021-05-11 17:27:03,159 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: GYEMALATHA
+2021-05-11 17:27:03,159 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214535 is 1
+2021-05-11 17:27:03,160 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:27:03,160 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : GYEMALATHA week : 20 id : 501546D category:non-BIP
+2021-05-11 17:27:03,605 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214535 Inserted the record successfully...
+2021-05-11 17:27:03,605 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:27:03,606 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214437 MSISDN count : 1Identity : 414559X
+2021-05-11 17:27:03,606 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:27:03,606 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:27:03,606 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214437 MSISDN count : 1Identity : 414559X
+2021-05-11 17:27:03,606 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:27:44,732 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:27:44,732 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:27:44,985 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:27:44,985 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:27:44,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:27:44,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:27:44,986 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 108 Daily Cap Limit: 150
+2021-05-11 17:27:44,987 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 17:27:44,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 17:27:44,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:27:44,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 17:27:44,988 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,989 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 73 Daily Cap Limit: 150
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 17:27:44,990 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,991 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:27:44,991 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:27:44,991 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:27:44,991 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,991 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:27:44,992 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:27:44,992 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:27:44,992 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:27:44,992 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214437 cannot be assgned to any active user due to component exclusion.
+2021-05-11 17:27:44,993 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:27:44,993 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214436 MSISDN count : 3Identity : 37441T
+2021-05-11 17:27:44,993 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:27:44,993 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:27:44,993 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214436 MSISDN count : 3Identity : 37441T
+2021-05-11 17:27:44,994 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:28:24,722 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:28:24,722 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:28:25,260 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:28:25,261 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:28:25,262 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:28:25,262 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214436 is 1
+2021-05-11 17:28:25,262 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:28:25,262 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214436 with msidn count:3
+2021-05-11 17:28:25,262 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214436 with msidn count:3
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:28:25,263 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : GYEMALATHA Total Assigned : 109 Daily Cap Limit: 150
+2021-05-11 17:28:25,264 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: GYEMALATHA
+2021-05-11 17:28:25,264 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214436 is 1
+2021-05-11 17:28:25,264 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:28:25,264 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : GYEMALATHA week : 20 id : 37441T category:non-BIP
+2021-05-11 17:28:25,693 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214436 Inserted the record successfully...
+2021-05-11 17:28:25,693 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:28:25,693 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214425 MSISDN count : 1Identity : 168207T
+2021-05-11 17:28:25,693 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:28:25,694 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:28:25,694 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214425 MSISDN count : 1Identity : 168207T
+2021-05-11 17:28:25,694 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:29:05,401 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:29:05,402 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:29:05,633 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: null
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214425 is 1
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: ALVINLU@maxis.com.my
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: null will exceed for regId:2214425 with msidn count:1
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:29:05,634 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:29:05,635 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] The daily cap limit for user: ELINAMS@maxis.com.my will exceed for regId:2214425 with msidn count:1
+2021-05-11 17:29:05,635 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Moving to the next active user for this order.
+2021-05-11 17:29:05,635 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:29:05,635 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:29:05,635 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : GYEMALATHA Total Assigned : 112 Daily Cap Limit: 150
+2021-05-11 17:29:05,636 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the products excluded for the user: GYEMALATHA
+2021-05-11 17:29:05,636 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Product Id for regId: 2214425 is 1
+2021-05-11 17:29:05,636 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order will be assigned to user: GYEMALATHA
+2021-05-11 17:29:05,636 INFO com.maxis.autoAssignment.service.AutoAssignmentService [main] in insertSchIdentifier user : GYEMALATHA week : 20 id : 168207T category:non-BIP
+2021-05-11 17:29:06,064 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214425 Inserted the record successfully...
+2021-05-11 17:29:06,064 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 17:29:06,065 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214423 MSISDN count : 7Identity : 168207T
+2021-05-11 17:29:06,065 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Assignment not successful
+2021-05-11 17:29:06,065 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 17:29:06,065 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 2214423 MSISDN count : 7Identity : 168207T
+2021-05-11 17:29:06,065 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned started
+2021-05-11 17:29:45,869 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTotalAssigned ended
+2021-05-11 17:29:45,870 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas started
+2021-05-11 17:29:46,518 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] getTransVas ended
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] User on top : ALVINLU@maxis.com.my Total Assigned : 194 Daily Cap Limit: 100
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ALVINLU@maxis.com.my
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : ELINAMS@maxis.com.my Total Assigned : 150 Daily Cap Limit: 150
+2021-05-11 17:29:46,519 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: ELINAMS@maxis.com.my
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : GYEMALATHA Total Assigned : 112 Daily Cap Limit: 150
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: GYEMALATHA
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: GYEMALATHA
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HEMAISS Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HEMAISS
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HEMAISS
+2021-05-11 17:29:46,520 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : NAVINKUMAR@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: NAVINKUMAR@maxis.com.my
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : RISHALINYM Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: RISHALINYM
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: RISHALINYM
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nfarahina@maxis.com.my Total Assigned : 73 Daily Cap Limit: 150
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nfarahina@maxis.com.my
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nfarahina@maxis.com.my
+2021-05-11 17:29:46,521 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : nurulizzat@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: nurulizzat@maxis.com.my
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Next User : HIDAYATIZ@maxis.com.my Total Assigned : 0 Daily Cap Limit: 150
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the components included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Checking the component to be included for the user: HIDAYATIZ@maxis.com.my
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Component Id is to be excluded for the user. Hence moving on to the next user
+2021-05-11 17:29:46,522 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Order with regId: 2214423 cannot be assgned to any active user due to component exclusion.
+2021-05-11 17:29:46,534 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 17:29:46,537 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-05-11 17:29:48,116 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2021-05-11 17:57:16,484 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 15016 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 17:57:16,489 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 17:57:17,118 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 17:57:17,254 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 122ms. Found 6 repository interfaces.
+2021-05-11 17:57:18,076 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 17:57:24,889 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 17:57:25,004 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 17:57:25,109 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 17:57:25,209 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 17:57:25,211 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 17:57:25,458 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 17:57:25,945 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 17:57:25,955 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 17:57:25,957 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 17:57:27,978 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 17:57:28,505 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 17:57:29,130 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 13.175 seconds (JVM running for 13.814)
+2021-05-11 17:59:58,826 INFO org.springframework.boot.StartupInfoLogger [main] Starting AutoAssignmentBatchApplication on L-156233719 with PID 4908 (D:\Projects\AutoAssignmentJobSME-Corp\target\classes started by AD389249 in D:\Projects\AutoAssignmentJobSME-Corp)
+2021-05-11 17:59:58,833 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: prod
+2021-05-11 17:59:59,671 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-11 17:59:59,827 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 143ms. Found 6 repository interfaces.
+2021-05-11 18:00:00,784 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-11 18:00:10,038 INFO com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2021-05-11 18:00:10,196 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-11 18:00:10,375 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-11 18:00:10,605 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2021-05-11 18:00:10,609 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-05-11 18:00:11,032 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-05-11 18:00:11,653 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-05-11 18:00:11,665 WARN org.hibernate.dialect.Oracle9Dialect [main] HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-05-11 18:00:11,669 WARN org.hibernate.dialect.OracleDialect [main] HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-05-11 18:00:14,165 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 18:00:14,719 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2021-05-11 18:00:15,363 INFO org.springframework.boot.StartupInfoLogger [main] Started AutoAssignmentBatchApplication in 17.07 seconds (JVM running for 17.76)
+2021-05-11 18:00:36,465 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :corp
+2021-05-11 18:01:37,101 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No. of active users for SMEInd : 8
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] =========================================================================================
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Starting scheduler............ 
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1733505 MSISDN count : 0
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,102 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1733505 MSISDN count : 0
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1732863 MSISDN count : 0
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1732863 MSISDN count : 0
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,103 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1137213 MSISDN count : 0
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1137213 MSISDN count : 0
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1139701 MSISDN count : 0
+2021-05-11 18:01:37,104 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1139701 MSISDN count : 0
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1136385 MSISDN count : 0
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1136385 MSISDN count : 0
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,105 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1136384 MSISDN count : 0
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1136384 MSISDN count : 0
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No active users for :SMEInd
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] Hour of day : 12pm to 3 pm, so using users with PM shift first
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1658448 MSISDN count : 0
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] No user in PM shift was assigned hence using ones with AM shift now
+2021-05-11 18:01:37,106 INFO com.maxis.autoAssignment.utils.AutoAssingmentController [main] RegId : 1658448 MSISDN count : 0
